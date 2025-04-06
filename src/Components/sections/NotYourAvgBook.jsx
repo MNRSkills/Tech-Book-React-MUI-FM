@@ -7,7 +7,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import NotYourBook from "../assets/images/image-not-average-mobile.webp";
+// import NotYourBook from "../assets/images/image-not-average-mobile.webp";
 
 function NotYourAvgBook() {
   return (
