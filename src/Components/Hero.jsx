@@ -36,7 +36,7 @@ function Hero() {
       <Button
         variant="contained"
         sx={{
-          background: "transparent",
+          background: "#fff5ef",
           width: "343px",
           height: "64px",
           border: "2px solid #062630",

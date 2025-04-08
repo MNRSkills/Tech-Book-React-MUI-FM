@@ -4,22 +4,22 @@ const Membership = () => {
   const cardData = [
     {
       title: "Starter",
-      price: "19",
-      icon: "icon",
+      price: 19,
+      subNow: "Subscribe Now",
       access1: "1 book/month",
       access2: "Online forums",
     },
     {
       title: "Pro",
-      price: "29",
-      icon: "icon",
+      price: 29,
+      subNow: "Subscribe Now",
       access1: "2 books/month",
       access2: "Virtual meetups",
     },
     {
       title: "Enterprise",
       price: "Custom",
-      icon: "icon",
+      subNow: "Talk To Us",
       access1: "Team access",
       access2: "Private session",
     },
@@ -33,9 +33,16 @@ const Membership = () => {
         >
           Membership options
         </Typography>
-        <Box>
+        {/* Move the width to section for all sections */}
+        <Box sx={{}}>
           {cardData.map((accessTier, index) => {
-            return <Cards accessTier={accessTier} key={index} />;
+            return (
+              <Cards
+                accessTier={accessTier}
+                key={index}
+                gradientStyle={index === 1}
+              />
+            );
           })}
         </Box>
       </Box>
