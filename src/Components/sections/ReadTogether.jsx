@@ -31,7 +31,19 @@ const FeatureItem = ({ text }) => (
 function ReadTogether() {
   return (
     <>
-      <Container>
+      <Box>
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: "2em",
+            fontWeight: "bold",
+            mb: 2,
+            textAlign: "left",
+            maxWidth: "100%",
+          }}
+        >
+          Read together, grow together
+        </Typography>
         <Box>
           <List>
             {listItems.map((item, index) => (
@@ -39,10 +51,7 @@ function ReadTogether() {
             ))}
           </List>
         </Box>
-        <Box sx={{ padding: "10px" }}>
-          <img src={reading} alt="" style={{ width: "343px" }} />
-        </Box>
-      </Container>
+      </Box>
     </>
   );
 }

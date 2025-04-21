@@ -26,25 +26,23 @@ const Membership = () => {
   ];
   return (
     <>
-      <Box>
-        <Typography
-          variant="h1"
-          sx={{ fontSize: "2em", fontWeight: "bold", mb: 2 }}
-        >
-          Membership options
-        </Typography>
-        {/* Move the width to section for all sections */}
-        <Box sx={{}}>
-          {cardData.map((accessTier, index) => {
-            return (
-              <Cards
-                accessTier={accessTier}
-                key={index}
-                gradientStyle={index === 1}
-              />
-            );
-          })}
-        </Box>
+      <Typography
+        variant="h1"
+        sx={{ fontSize: "2em", fontWeight: "bold", mb: 2 }}
+      >
+        Membership options
+      </Typography>
+      {/* Move the width to section for all sections */}
+      <Box sx={{}}>
+        {cardData.map((accessTier, index) => {
+          return (
+            <Cards
+              accessTier={accessTier}
+              key={index}
+              gradientStyle={index === 1}
+            />
+          );
+        })}
       </Box>
     </>
   );

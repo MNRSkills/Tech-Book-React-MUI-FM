@@ -84,7 +84,7 @@ const Cards = ({ accessTier, gradientStyle }) => {
         </Box>
         <Button
           sx={{
-            background: "#fff5ef",
+            background: "primary",
             width: "100%",
             height: "64px",
             border: "2px solid #062630",

@@ -2,8 +2,25 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#fff5ef", // Light background
+      contrastText: "#062630", // Dark text for contrast
+    },
+    secondary: {
+      main: "#062630", // Dark button
+      contrastText: "#fff5ef", // Light text for contrast
+    },
+    text: {
+      primary: "#062630",
+      secondary: "#fff5ef",
+    },
+  },
+  sm: "365px",
+  md: 740,
   typography: {
     fontFamily: `'Martian Mono', monospace`, // default
+
     mono: {
       fontFamily: `'Martian Mono', monospace`,
       fontWeight: 400,
@@ -35,9 +52,7 @@ const theme = createTheme({
       ],
     },
   },
-  Box: {
-    
-  }
+  Box: {},
 });
 
 export default theme;
