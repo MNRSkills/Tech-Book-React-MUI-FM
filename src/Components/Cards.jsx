@@ -13,7 +13,7 @@ import patternGlow from "../assets/images/pattern-glow.svg";
 console.log(patternGlow);
 
 const Cards = ({ accessTier, gradientStyle }) => {
-  console.log(accessTier);
+  console.log(gradientStyle, "added styles");
   return (
     <>
       <Container
@@ -82,20 +82,8 @@ const Cards = ({ accessTier, gradientStyle }) => {
             </ListItem>
           </List>
         </Box>
-        <Button
-          sx={{
-            background: "primary",
-            width: "100%",
-            height: "64px",
-            border: "2px solid #062630",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            color: "black",
-            padding: "0",
-            margin: "24px 0",
-          }}
-        >
+        {/* <Button>{accessTier.subNow}</Button> */}
+        <Button variant="contained" sx={{ width: "100%" }}>
           {accessTier.subNow}
         </Button>
       </Container>

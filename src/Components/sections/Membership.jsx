@@ -1,4 +1,4 @@
-import { Box, Container, Button, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import Cards from "../Cards";
 const Membership = () => {
   const cardData = [
@@ -33,7 +33,10 @@ const Membership = () => {
         Membership options
       </Typography>
       {/* Move the width to section for all sections */}
-      <Box sx={{}}>
+      <Stack
+        direction={{ xs: "column", sm: "column", md: "row" }}
+        spacing={{ xs: 1, sm: 2, md: 4 }}
+      >
         {cardData.map((accessTier, index) => {
           return (
             <Cards
@@ -43,7 +46,7 @@ const Membership = () => {
             />
           );
         })}
-      </Box>
+      </Stack>
     </>
   );
 };

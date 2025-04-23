@@ -3,6 +3,7 @@ import heroMobile from "../assets/images/image-hero-mobile.webp";
 import logo from "../assets/images/logo.svg";
 import downArrow from "../assets/images/icon-arrow-down.svg";
 import { StarFeature } from "../Utils/Features";
+import { lightGreen } from "@mui/material/colors";
 
 // linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
 function Hero() {
@@ -16,18 +17,22 @@ function Hero() {
       <Stack
         direction={{
           xs: "column",
-          md: "row",
+          md: "column",
+          // lg: "row",
         }}
       >
         <Typography
           variant="h1"
           sx={{
-            fontSize: 35,
+            fontSize: {
+              xs: 35,
+              sm: 40,
+              lg: 42,
+            },
             fontWeight: "bold",
             textAlign: "left",
             lineHeight: "3.5rem",
             margin: "24px 0 32px",
-            sm: 700,
           }}
         >
           Join the ultimate tech book club
@@ -40,19 +45,7 @@ function Hero() {
           and level up your skills one chapter at a time.
         </Typography>
         {/* Button & arrow ... */}
-        <Button
-          variant="contained"
-          sx={{
-            width: "343px",
-            height: "64px",
-            border: "2px solid #062630",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            color: "black",
-            padding: "0",
-          }}
-        >
+        <Button variant="contained" sx={{}}>
           <Typography sx={{ fontWeight: "bold", margin: "auto" }}>
             REVIEW MEMBERSHIP OPTIONS
           </Typography>
@@ -62,11 +55,9 @@ function Hero() {
             style={{ width: "24px", padding: "0 5px" }}
           />
         </Button>
+        {/* Testimonial .... */}
+        <StarFeature />
       </Stack>
-
-      {/* Testimonial .... */}
-
-      <StarFeature />
 
       <Box sx={{ marginTop: "64px" }}>
         <img

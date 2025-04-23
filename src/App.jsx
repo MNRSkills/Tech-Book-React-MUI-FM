@@ -19,7 +19,7 @@ import starsMobile from "./assets/images/icon-star.svg";
 function App() {
   return (
     <>
-      <Container>
+      <Container sx={{ margin: 0 }}>
         <Hero heroImg={imageHeroMobile} />
         {/* Sections  */}
         <Section image={readTogethermobile} sx={{ textAlign: "center" }}>
@@ -34,7 +34,7 @@ function App() {
         <Section>
           <Testimonial starsMobile={starsMobile} />
         </Section>
-        <Box sx={{   background: "#062630",}}>
+        <Box sx={{ background: "#062630" }}>
           <Footer />
         </Box>
       </Container>

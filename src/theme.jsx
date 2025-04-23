@@ -2,9 +2,19 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 365,
+      md: 768,
+      lg: 1440,
+      xl: 1920,
+    },
+  },
   palette: {
     primary: {
       main: "#fff5ef", // Light background
+
       contrastText: "#062630", // Dark text for contrast
     },
     secondary: {
@@ -16,8 +26,7 @@ const theme = createTheme({
       secondary: "#fff5ef",
     },
   },
-  sm: "365px",
-  md: 740,
+
   typography: {
     fontFamily: `'Martian Mono', monospace`, // default
 
@@ -33,26 +42,21 @@ const theme = createTheme({
     },
   },
   components: {
-    MuiTypography: {
-      variants: [
-        {
-          props: { variant: "mono" },
-          style: {
-            fontFamily: `'Martian Mono', monospace`,
-            fontWeight: [400, 700, 800],
-          },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          width: "343px",
+          height: "64px",
+          border: "2px solid #062630",
+          textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          color: "black",
+          padding: "0",
         },
-        {
-          props: { variant: "inter" },
-          style: {
-            fontFamily: `'Inter', sans-serif`,
-            fontWeight: 400,
-          },
-        },
-      ],
+      },
     },
   },
-  Box: {},
 });
 
 export default theme;
