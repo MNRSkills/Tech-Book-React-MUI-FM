@@ -56,6 +56,20 @@ const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: "0 1px 4px #385159",
+          padding: "20px 20px",
+          margin: "24px 0",
+          borderRadius: "2%",
+          position: "relative",
+          overflow: "hidden",
+          // background: gradientStyle ? "#faf5f3" : "#fffff",
+          width: 340,
+        },
+      },
+    },
   },
 });
 

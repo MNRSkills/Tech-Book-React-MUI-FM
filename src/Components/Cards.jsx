@@ -2,6 +2,7 @@ import {
   Typography,
   Button,
   Container,
+  Card,
   List,
   ListItem,
   ListItemText,
@@ -16,17 +17,7 @@ const Cards = ({ accessTier, gradientStyle }) => {
   console.log(gradientStyle, "added styles");
   return (
     <>
-      <Container
-        sx={{
-          boxShadow: "0 1px 4px #385159",
-          padding: "20px 20px",
-          margin: "24px 0",
-          borderRadius: "2%",
-          position: "relative",
-          overflow: "hidden",
-          background: gradientStyle ? "#faf5f3" : "#fffff",
-        }}
-      >
+      <Card>
         {gradientStyle ? (
           <Box
             sx={{
@@ -86,7 +77,7 @@ const Cards = ({ accessTier, gradientStyle }) => {
         <Button variant="contained" sx={{ width: "100%" }}>
           {accessTier.subNow}
         </Button>
-      </Container>
+      </Card>
     </>
   );
 };

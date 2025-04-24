@@ -4,7 +4,11 @@ const Section = ({ image, children, titleVariant = "h2", sx = {} }) => {
   console.log(image);
   return (
     <section>
-      <Box sx={{ xs: "343px", sm: "365px", md: "768px", lg: "1440px" }}>
+      <Box
+        sx={{
+          width: { xs: "343px", sm: "365px", md: "768px", lg: "1440px" },
+        }}
+      >
         {children}
       </Box>
       <Box>
