@@ -26,7 +26,7 @@ const Membership = () => {
     },
   ];
   return (
-    <>
+    <Grid container spacing={2} columns={{ xs: 1, sm: 2, md: 2 }}>
       <Typography
         variant="h1"
         sx={{ fontSize: "2em", fontWeight: "bold", mb: 2 }}
@@ -34,41 +34,21 @@ const Membership = () => {
         Membership options
       </Typography>
       {/* Move the width to section for all sections */}
-      {/* <Grid
-        container
-        spacing={}
-        // key={index}
-        xs={12} // full width on phones
-        sm={6} // still one per row
-        md={4} // 2 per row on tablet
-        //lg={4} // 3 per row on desktop
-      >
-        {cardData.map((accessTier, index) => {
-          return (
-            <Cards
-              accessTier={accessTier}
-              key={index}
-              gradientStyle={index === 1}
-            />
-          );
-        })}
-      </Grid> */}
 
-      <Grid container spacing={2} columns={{ xs: 1, sm: 2, md: 2 }}>
-        {cardData.map((accessTier, index) => (
-          <Grid
-            item
-            key={index}
-            xs={12} // 1 per row on mobile
-            sm={12}
-            md={6} // 2 per row on tablets
-            lg={4} // 3 per row on desktop
-          >
-            <Cards accessTier={accessTier} gradientStyle={index === 1} />
-          </Grid>
-        ))}
-      </Grid>
-    </>
+      {/* <Grid container spacing={2} columns={{ xs: 1, sm: 2, md: 2 }}> */}
+      {cardData.map((accessTier, index) => (
+        <Grid
+          item
+          key={index}
+          sm={4}
+          md={12} // 2 per row on tablets
+          lg={4} // 3 per row on desktop
+        >
+          <Cards accessTier={accessTier} gradientStyle={index === 1} />
+        </Grid>
+      ))}
+      {/* </Grid> */}
+    </Grid>
   );
 };
 

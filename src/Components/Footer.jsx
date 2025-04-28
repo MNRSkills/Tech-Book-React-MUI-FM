@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <>
       <Box
+        component={"footer"}
         sx={{
           position: "relative",
           background: "#062630",
@@ -69,9 +70,7 @@ const Footer = () => {
       </Box>
       <Box>
         @ 2024 - Tech Book Club
-        <Box>
-
-        </Box>
+        
       </Box>
     </>
   );

@@ -1,76 +1,153 @@
 import { Container, Typography, Box, Button, Stack } from "@mui/material";
-import heroMobile from "../assets/images/image-hero-mobile.webp";
-import logo from "../assets/images/logo.svg";
 import downArrow from "../assets/images/icon-arrow-down.svg";
+import patterBg from "../assets/images/pattern-light-bg.svg";
 import { StarFeature } from "../Utils/Features";
-import { lightGreen } from "@mui/material/colors";
 
-// linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
-function Hero() {
+function Hero({ heroImg, mdHeroImg, lgHeroImg, logo }) {
+  console.log(heroImg, mdHeroImg, lgHeroImg, "My images in the blood.");
   return (
-    <header>
-      <nav sx={{}}>
-        <Box>
-          <img src={logo} alt="" />
-        </Box>
-      </nav>
+    <Box
+      component="header"
+      sx={{
+        backgroundImage: `url(${patterBg})`,
+        bgcolor: "primary.main",
+        margin: 0,
+        padding: "0 20px",
+        height: {
+          lg: "834px",
+        },
+      }}
+    >
+      {/* Navigation */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: { xs: "24px", md: "48px" },
+        }}
+      >
+        <Box component="image" sx={{ backgroundImage: `url(${logo})` }}></Box>
+      </Box>
+
+      {/* Main Stack */}
       <Stack
         direction={{
           xs: "column",
           md: "column",
-          // lg: "row",
+          lg: "row",
         }}
+        spacing={{ xs: 4, md: 6 }}
+        alignItems="center"
+        justifyContent="space-between"
       >
-        <Typography
-          variant="h1"
+        {/* Text Content */}
+        <Box
           sx={{
-            fontSize: {
-              xs: 35,
-              sm: 40,
-              lg: 42,
+            width: {
+              xs: "100%",
+              md: "100%",
+              lg: "50%",
             },
-            fontWeight: "bold",
             textAlign: "left",
-            lineHeight: "3.5rem",
-            margin: "24px 0 32px",
           }}
         >
-          Join the ultimate tech book club
-        </Typography>
-        <Typography
-          sx={{ fontFamily: "'Inter', sans-serif", margin: "32px 0" }}
-        >
-          Turn your reading time into learning time with fellow tech
-          enthusiasts. Get curated recommendations, join vibrant discussions,
-          and level up your skills one chapter at a time.
-        </Typography>
-        {/* Button & arrow ... */}
-        <Button variant="contained" sx={{}}>
-          <Typography sx={{ fontWeight: "bold", margin: "auto" }}>
-            REVIEW MEMBERSHIP OPTIONS
+          <Typography
+            variant="h1"
+            sx={{
+              background:
+                "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text", // Safari + Chrome need this
+              color: "transparent",
+              WebkitTextFillColor: "transparent", // Safari fix
+              fontSize: {
+                sm: "42px",
+                md: "70px",
+                lg: "48px",
+              },
+              fontWeight: "bold",
+              lineHeight: {
+                xs: "2.5rem",
+                sm: "4rem",
+                md: "5.5rem",
+                lg: "3.5rem",
+              },
+              marginBottom: "24px",
+              width: { md: "450px" },
+            }}
+          >
+            Join the ultimate tech book club
           </Typography>
-          <img
-            src={downArrow}
-            alt="Arrow here "
-            style={{ width: "24px", padding: "0 5px" }}
-          />
-        </Button>
-        {/* Testimonial .... */}
-        <StarFeature />
+
+          <Typography
+            sx={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: {
+                xs: "16px",
+                sm: "18px",
+                md: "20px",
+                lg: "25px",
+              },
+              marginBottom: "32px",
+            }}
+          >
+            Turn your reading time into learning time with fellow tech
+            enthusiasts. Get curated recommendations, join vibrant discussions,
+            and level up your skills one chapter at a time.
+          </Typography>
+
+          {/* Button */}
+          <Button
+            variant="contained"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              fontWeight: "bold",
+              fontSize: {
+                sm: "16px",
+                md: "18px",
+              },
+              width: {
+                sm: "343px",
+                md: "380px",
+              },
+            }}
+          >
+            REVIEW MEMBERSHIP OPTIONS
+            <img src={downArrow} alt="Arrow" style={{ width: "24px" }} />
+          </Button>
+
+          {/* Star Feature */}
+          <Box sx={{ marginTop: "32px", width: "auto" }}>
+            <StarFeature />
+          </Box>
+        </Box>
+
+        {/* Hero Image */}
+        <Box
+          sx={{
+            width: { sm: "100%", lg: "540px" },
+            minHeight: { sm: "343px", md: "1345px", lg: "606px" },
+            // marginTop: { xs: "32px", lg: "0" },
+            backgroundImage: {
+              sm: `url(${heroImg})`,
+              md: `url(${mdHeroImg})`,
+              lg: `url(${lgHeroImg})`,
+            },
+            backgroundRepeat: "no-repeat",
+            backgroundSize: {
+              sm: "cover",
+              md: "contain",
+            },
+            backgroundPosition: "center left",
+          }}
+        ></Box>
       </Stack>
 
-      <Box sx={{ marginTop: "64px" }}>
-        <img
-          src={heroMobile}
-          alt="Mobile hero"
-          style={{
-            width: "375px",
-            objectFit: "contain",
-          }}
-        />
-      </Box>
-      <div className="reviews-dev-join"></div>
-    </header>
+      {/* Extra spacing below */}
+    </Box>
   );
 }
 

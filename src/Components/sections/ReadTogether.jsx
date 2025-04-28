@@ -6,7 +6,9 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Grid2,
 } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import checkbox from "../../assets/images/icon-check.svg";
 import reading from "../../assets/images/image-read-together-mobile.webp";
 
@@ -31,7 +33,11 @@ const FeatureItem = ({ text }) => (
 function ReadTogether() {
   return (
     <>
-      <Box>
+      <Box
+        sx={{
+          backgroundColor: "blue",
+        }}
+      >
         <Typography
           variant="h1"
           sx={{
@@ -45,7 +51,7 @@ function ReadTogether() {
           Read together, grow together
         </Typography>
         <Box>
-          <List>
+          <List sx={{width: {lg:"530px"}}}>
             {listItems.map((item, index) => (
               <FeatureItem key={index} text={item} />
             ))}

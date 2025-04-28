@@ -9,26 +9,35 @@ export const StarFeature = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "start",
           gap: "12px",
           marginTop: "20px",
         }}
       >
-        <Box sx={{ backgroundColor: "red", margin: "auto" }}>
-          <img src={peopleImg} alt="" style={{ width: "100px" }} />
-        </Box>
+        <Box
+          sx={{
+            backgroundColor: "red",
+            backgroundImage: `url(${peopleImg})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            width: {
+              sm: "110px", 
+              md: "110px",
+            },
+          }}
+        ></Box>
+
         <Box>
-          <Box>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <img
-                key={index}
-                src={stars}
-                alt={`Replicated Image ${index + 1}`}
-                className="w-32 h-32 object-cover"
-              />
-            ))}
-            <Typography>200+ developers joined already</Typography>
-          </Box>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <img
+              key={index}
+              src={stars}
+              alt={`Replicated Image ${index + 1}`}
+              className="w-32 md:w-24 h-32 object-cover"
+            />
+          ))}
+          <Typography>200+ developers joined already</Typography>
         </Box>
       </Box>
     </>
