@@ -3,11 +3,10 @@ import { Box, Stack, Typography } from "@mui/material";
 const Section = ({ image, children, titleVariant = "h2", sx = {} }) => {
   console.log(image);
   return (
-    <Stack spacing={6} direction={{sm: "column", md:"column", lg:"row"}}>
+    <Stack spacing={6} direction={{ sm: "column", md: "column", lg: "row" }}>
       <Box
         sx={{
-          width: { xs: "343px", sm: "365px", md: "768px", lg: "1440px" },
-          
+          width: { xs: "343px", sm: "365px", md: "768px", lg: "431px" },
         }}
       >
         {children}
