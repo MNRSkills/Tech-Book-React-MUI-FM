@@ -30,12 +30,17 @@ const FeatureItem = ({ text }) => (
   </ListItem>
 );
 
-function ReadTogether() {
+function ReadTogether({
+  readTogethermobile,
+  readTogetherTablet,
+  readTogetherDesktop,
+}) {
   return (
     <>
       <Box
         sx={{
           backgroundColor: "blue",
+          width: "100%",
         }}
       >
         <Typography
@@ -50,12 +55,34 @@ function ReadTogether() {
         >
           Read together, grow together
         </Typography>
-        <Box>
-          <List sx={{width: {lg:"530px"}}}>
+        <Box sx={{ display: "flex", flexDirection: "row-reverse", gap: "80px" }}>
+          <List sx={{ width: { md: "768px", lg: "530px" } }}>
             {listItems.map((item, index) => (
               <FeatureItem key={index} text={item} />
             ))}
           </List>
+          <Box
+            sx={{
+              backgroundImage: {
+                sm: `url(${readTogethermobile})`,
+                md: `url(${readTogetherTablet})`,
+                lg: `url(${readTogetherDesktop})`,
+              },
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              height: {
+                xs: "318px",
+                md: "653px",
+                lg: "520px",
+              },
+              width: {
+                xs: "343px",
+                md: "704px",
+                lg: "560",
+              },
+            }}
+          ></Box>
         </Box>
       </Box>
     </>

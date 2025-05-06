@@ -10,12 +10,14 @@ import "./App.css";
 
 // IMAGES FOR THE COMPONENTS
 import readTogethermobile from "./assets/images/image-read-together-mobile.webp";
+import readTogetherTablet from "./assets/images/image-read-together-tablet.webp";
+import readTogetherDesktop from "./assets/images/image-read-together-desktop.webp";
 import notyourbook from "./assets/images/image-not-average-mobile.webp";
 import patternGlow from "./assets/images/pattern-glow.svg";
 import imageHeroMobile from "./assets/images/image-hero-mobile.webp";
 import imageHeroTablet from "./assets/images/image-hero-tablet.webp";
 import imageHeroDesktop from "./assets/images/image-hero-desktop.webp";
-import logo from "./assets/images/logo.svg"
+import logo from "./assets/images/logo.svg";
 import starsMobile from "./assets/images/icon-star.svg";
 // import { textAlign } from "@mui/system";
 
@@ -30,8 +32,12 @@ function App() {
           logo={logo}
         />
         {/* Sections  */}
-        <Section image={readTogethermobile} sx={{ textAlign: "center" }}>
-          <ReadTogether />
+        <Section sx={{ textAlign: "center" }}>
+          <ReadTogether
+            readTogethermobile={readTogethermobile}
+            readTogetherTablet={readTogetherTablet}
+            readTogetherDesktop={readTogetherDesktop}
+          />
         </Section>
         <Section image={notyourbook} sx={{ textAlign: "center" }}>
           <NotYourAvgBook />
