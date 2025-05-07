@@ -13,6 +13,8 @@ import readTogethermobile from "./assets/images/image-read-together-mobile.webp"
 import readTogetherTablet from "./assets/images/image-read-together-tablet.webp";
 import readTogetherDesktop from "./assets/images/image-read-together-desktop.webp";
 import notyourbook from "./assets/images/image-not-average-mobile.webp";
+import notyourBookMD from "./assets/images/image-not-average-tablet.webp";
+import notyourBookLG from "./assets/images/image-not-average-desktop.webp";
 import patternGlow from "./assets/images/pattern-glow.svg";
 import imageHeroMobile from "./assets/images/image-hero-mobile.webp";
 import imageHeroTablet from "./assets/images/image-hero-tablet.webp";
@@ -40,7 +42,11 @@ function App() {
           />
         </Section>
         <Section image={notyourbook} sx={{ textAlign: "center" }}>
-          <NotYourAvgBook />
+          <NotYourAvgBook
+            notyourBook={notyourbook}
+            notyourBookMD={notyourBookMD}
+            notyourBookLG={notyourBookLG}
+          />
         </Section>
         <Section>
           <Membership />
