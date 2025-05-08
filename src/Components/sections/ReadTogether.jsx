@@ -39,28 +39,37 @@ function ReadTogether({
     <>
       <Box
         sx={{
-          backgroundColor: "blue",
           width: "100%",
         }}
       >
-        <Typography
-          variant="h1"
+        <Box
           sx={{
-            fontSize: "2em",
-            fontWeight: "bold",
-            mb: 2,
-            textAlign: "left",
-            maxWidth: "100%",
+            display: "flex",
+            flexDirection: "row-reverse",
+            justifyContent: "space-around",
+            alignItems: "center",
+            gap: "80px",
           }}
         >
-          Read together, grow together
-        </Typography>
-        <Box sx={{ display: "flex", flexDirection: "row-reverse", gap: "80px" }}>
-          <List sx={{ width: { md: "768px", lg: "530px" } }}>
-            {listItems.map((item, index) => (
-              <FeatureItem key={index} text={item} />
-            ))}
-          </List>
+          <Box>
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: "2em",
+                fontWeight: "bold",
+                mb: 2,
+                textAlign: "left",
+                maxWidth: "100%",
+              }}
+            >
+              Read together, grow together
+            </Typography>
+            <List sx={{ width: { md: "768px", lg: "530px" } }}>
+              {listItems.map((item, index) => (
+                <FeatureItem key={index} text={item} />
+              ))}
+            </List>
+          </Box>
           <Box
             sx={{
               backgroundImage: {
@@ -81,6 +90,7 @@ function ReadTogether({
                 md: "704px",
                 lg: "560",
               },
+              borderRadius: "5%",
             }}
           ></Box>
         </Box>
