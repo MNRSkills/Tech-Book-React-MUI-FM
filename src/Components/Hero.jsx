@@ -4,7 +4,6 @@ import patterBg from "../assets/images/pattern-light-bg.svg";
 import { StarFeature } from "../Utils/Features";
 
 function Hero({ heroImg, mdHeroImg, lgHeroImg, logo }) {
-  console.log(heroImg, mdHeroImg, lgHeroImg, "My images in the blood.");
   return (
     <Box
       component="header"

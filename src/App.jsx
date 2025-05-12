@@ -21,6 +21,7 @@ import imageHeroTablet from "./assets/images/image-hero-tablet.webp";
 import imageHeroDesktop from "./assets/images/image-hero-desktop.webp";
 import logo from "./assets/images/logo.svg";
 import starsMobile from "./assets/images/icon-star.svg";
+import circle from "./assets/images/pattern-circle.png";
 // import { textAlign } from "@mui/system";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             notyourBook={notyourbook}
             notyourBookMD={notyourBookMD}
             notyourBookLG={notyourBookLG}
+            circle={circle}
           />
         </Section>
         <Section>

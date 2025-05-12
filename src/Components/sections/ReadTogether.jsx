@@ -6,7 +6,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Grid2,
+  useMediaQuery,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import checkbox from "../../assets/images/icon-check.svg";
@@ -35,9 +35,12 @@ function ReadTogether({
   readTogetherTablet,
   readTogetherDesktop,
 }) {
+  const phoneWindow = useMediaQuery(`(max-width: 475px)`);
+  const desktopWindow = useMediaQuery(`(max-width: 1440px)`);
   return (
     <>
       <Box
+        component="section"
         sx={{
           width: "100%",
         }}
@@ -45,7 +48,7 @@ function ReadTogether({
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row-reverse",
+            flexDirection: { sm: "column", lg: "row-reverse" },
             justifyContent: "space-around",
             alignItems: "center",
             gap: "80px",
@@ -64,6 +67,7 @@ function ReadTogether({
             >
               Read together, grow together
             </Typography>
+
             <List sx={{ width: { md: "768px", lg: "530px" } }}>
               {listItems.map((item, index) => (
                 <FeatureItem key={index} text={item} />
